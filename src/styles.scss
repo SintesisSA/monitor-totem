@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-div-icon {
+  @apply flex items-center justify-center;
+}
+
+.marker-pin {
+  @apply shadow-lg border-2 border-white;
+  transition: all 0.3s ease;
+}
+
+.marker-pin:hover {
+  @apply transform scale-125;
+}
