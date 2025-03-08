@@ -1,0 +1,11 @@
+name: monitor-totem
+
+services:
+  ui:
+    container_name: monitor-totem
+    image: ${UI_IMAGE:-ghcr.io/sintesissa/totem-monitor-ui}:${UI_VERSION:-latest}
+    restart: unless-stopped
+    ports:
+      - "${UI_PORT:-0.0.0.0:80}:80"
+    environment:
+      BASE_CONTEXT: ${UI_BASE_CONTEXT:-/}
